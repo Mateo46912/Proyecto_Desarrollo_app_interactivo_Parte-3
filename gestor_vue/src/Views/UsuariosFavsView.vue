@@ -7,13 +7,16 @@ const storeUsuarios = GuardarStoreUsuarios();
 
 <template>
     <h1>Usuarios Favoritos</h1>
-    <p>Tienes {{storeUsuarios.contadorFavs}} usuarios favoritos</p>
+     <span id = "contadorFavs">Usuarios Favoritos: <String>{{storeUsuarios.contadorFavs}}</String></span>
 
     <RouterLink to = "/">Volver a todos los usuarios</RouterLink>
 
-    <TarjetaUsuario 
-    v-for="favorito in storeUsuarios.usuariosFavoritos"
-    key="favorito.id"
-    :usuario = "favorito"
-    @favorito = "storeUsuarios.quitarFavoritos"/>
+    <div id="instanciaTarjeta">
+        <TarjetaUsuario id = "tarjetaIND"
+        v-for="favorito in storeUsuarios.usuariosFavoritos"
+        key="favorito.id"
+        :usuario = "favorito"
+        @favorito = "storeUsuarios.quitarFavoritos"/>
+    </div>
+
 </template>

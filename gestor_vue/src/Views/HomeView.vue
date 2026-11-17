@@ -24,9 +24,12 @@ const usuariosBuscados = computed(()=>{
 <template>
   <h1>Lista de Usuarios</h1>
 
+  <div class="buscadorCli">
   <label for="buscarCli">Buscar Cliente: </label>
   <input id = "buscarCli" type = "text" placeholder="Ejm. Ervin"  v-model = "textoIngresado"></input>
-  <p>Tienes {{storeUsuarios.contadorFavs}} usuarios favoritos</p>
+  </div>
+ 
+  <span id = "contadorFavs">Usuarios Favoritos: <String>{{storeUsuarios.contadorFavs}}</String></span>
 
   <RouterLink to="/usuarios/favs">Ver Favoritos</RouterLink>
 
@@ -39,7 +42,7 @@ const usuariosBuscados = computed(()=>{
    <h3 v-else-if="usuariosBuscados.length ===0"> <string>No se encontraron usuarios</string></h3>
 
   <div v-else id="instanciaTarjeta">
-    <TarjetaUsuario v-for="usuario in usuariosBuscados" 
+    <TarjetaUsuario id ="tarjetaIND" v-for="usuario in usuariosBuscados" 
     key="usuario.id" 
     :usuario="usuario"
     @favorito="storeUsuarios.agregarFavoritos"/>
