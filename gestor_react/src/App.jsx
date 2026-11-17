@@ -1,8 +1,9 @@
-import { useState } from "react";
+import HomePage from './pages/HomePage.jsx'
 
-
-function App() {
-  return <h1>Lista de Usuarios</h1>;
+export function App() {
+  return(
+    <HomePage/>
+  )
+  
 }
-
 export default App;
