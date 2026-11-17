@@ -16,9 +16,10 @@ Se utilizó un solo repositorio de GitHub con dos carpetas principales, una para
 Proyecto_Desarrollo_app_interactivo_Parte-3/
 ├── gestor_vue/
 │   └── src/
+│       ├── Views/
+│       ├── assets/
 │       ├── components/
 │       ├── router/
-│       ├── services/
 │       ├── stores/
 │       ├── __tests__/
 │       ├── App.vue

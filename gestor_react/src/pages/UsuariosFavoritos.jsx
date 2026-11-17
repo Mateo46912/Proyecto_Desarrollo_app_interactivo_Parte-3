@@ -11,7 +11,7 @@ export function UsuariosFavoritos() {
 
   return (
     <div>
-      <h1>Lista de Usuarios</h1>
+      <h1>Usuarios Favoritos</h1>
 
       <span id="contadorFavs">
         Usuarios Favoritos: {' '}{usuariosFavoritos.length}

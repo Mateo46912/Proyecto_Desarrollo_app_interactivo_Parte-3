@@ -42,8 +42,8 @@ const usuariosBuscados = computed(()=>{
    <h3 v-else-if="usuariosBuscados.length ===0"> <string>No se encontraron usuarios</string></h3>
 
   <div v-else id="instanciaTarjeta">
-    <TarjetaUsuario id ="tarjetaIND" v-for="usuario in usuariosBuscados" 
-    key="usuario.id" 
+    <TarjetaUsuario class ="tarjetaIND" v-for="usuario in usuariosBuscados" 
+    :key="usuario.id" 
     :usuario="usuario"
     @favorito="storeUsuarios.agregarFavoritos"/>
   </div>

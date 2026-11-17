@@ -12,9 +12,9 @@ const storeUsuarios = GuardarStoreUsuarios();
     <RouterLink to = "/">Volver a todos los usuarios</RouterLink>
 
     <div id="instanciaTarjeta">
-        <TarjetaUsuario id = "tarjetaIND"
+        <TarjetaUsuario class = "tarjetaIND"
         v-for="favorito in storeUsuarios.usuariosFavoritos"
-        key="favorito.id"
+        :key="favorito.id"
         :usuario = "favorito"
         @favorito = "storeUsuarios.quitarFavoritos"/>
     </div>

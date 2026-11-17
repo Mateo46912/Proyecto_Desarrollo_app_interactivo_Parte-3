@@ -40,13 +40,14 @@ export const GuardarStoreUsuarios = defineStore("usuario", () => {
   }
 
   function quitarFavoritos(id) {
-    const usuarioEncontrado = usuarios.value.find((usuario) => usuario.id === id);
+    const posicion = usuariosFavoritos.value.findIndex(
+        usuario => usuario.id === id
+    );
 
-    if (usuariosFavoritos) {
-      const posicion = usuariosFavoritos.value.indexOf(usuarioEncontrado);
-      usuariosFavoritos.value.splice(posicion, 1);
+    if (posicion !== -1) {
+        usuariosFavoritos.value.splice(posicion, 1);
     }
-  }
+}
 
   return { ObtenerUsuariosAPI, usuarios, Cargando, error, agregarFavoritos, usuariosFavoritos, quitarFavoritos };
 });

@@ -42,7 +42,7 @@ h1 {
     margin-top: 25px;
 }
 
-#tarjetaIND {
+.tarjetaIND {
     line-height: 20px;
     background-color: #dce8f2;
     border: 1px solid #b8cddd;
@@ -51,17 +51,17 @@ h1 {
     border-radius: 15px;
 }
 
-#tarjetaIND h2 {
+.tarjetaIND h2 {
     color: #1e3a5f;
     font-size: 21px;
 }
 
-#tarjetaIND p {
+.tarjetaIND p {
     color: #334155;
     font-size: 17px;
 }
 
-#tarjetaIND button {
+.tarjetaIND button {
     background-color: #2563eb;
     color: white;
     border: 1px solid #1d4ed8;
@@ -71,7 +71,7 @@ h1 {
     cursor: pointer;
 }
 
-#tarjetaIND button:hover {
+.tarjetaIND button:hover {
     background-color: #1d4ed8;
 }
 
