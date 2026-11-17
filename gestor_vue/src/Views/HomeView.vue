@@ -25,7 +25,7 @@ const usuariosBuscados = computed(()=>{
   <h1>Lista de Usuarios</h1>
 
   <div class="buscadorCli">
-  <label for="buscarCli">Buscar Cliente: </label>
+  <label for="buscarCli">Buscar Usuario: </label>
   <input id = "buscarCli" type = "text" placeholder="Ejm. Ervin"  v-model = "textoIngresado"></input>
   </div>
  
