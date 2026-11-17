@@ -1,6 +1,6 @@
 function TarjetaUsuario({usuario, esFavorito}){
     return(
-        <div className = "TarjetaUsuario"> 
+        <div id = "tarjetaIND"> 
             <h2>{usuario.name}</h2>
             <p>Correo: {usuario.email}</p>
             <p>Ciudad: {usuario.address.city}</p>

@@ -1,30 +1,35 @@
-import usarDatosUsuarios from "../context/UsuariosContexto";
+import { usarDatosUsuarios } from "../context/UsuariosContexto";
 import TarjetaUsuario from "../components/TarjetaUsuario";
+import { Link } from "react-router-dom";
 
-function UsuariosFavoritos() {
+export function UsuariosFavoritos() {
   const datosUsuarios = usarDatosUsuarios();
-  const usuarios = datosUsuarios.usuarios;
   const errores = datosUsuarios.errores;
   const EstaCargando = datosUsuarios.EstaCargando;
-  const usuariosFavoritos = datosUsuarios.UsuariosFavoritos;  
+  const usuariosFavoritos = datosUsuarios.usuariosFavoritos;
   const eliminarFavorito = datosUsuarios.eliminarFavorito;
 
   return (
     <div>
       <h1>Lista de Usuarios</h1>
 
-      <p>Usuarios Favoritos: {usuariosFavs.length}</p>
+      <span id="contadorFavs">
+        Usuarios Favoritos: {' '}{usuariosFavoritos.length}
+      </span>
+
+      <Link to="/">Volver al listado de usuarios</Link>
 
       {EstaCargando && <p>Cargando Usuarios...</p>}
 
       {errores && <p>{errores}</p>}
 
-      {usuariosFavoritos.map((usuario) => (
-        <TarjetaUsuario 
-        key={usuario.id}
-        usuario={usuario}
-        esFavorito={eliminarFavorito} />
-      ))}
+      <div id="instanciaTarjeta">
+        {usuariosFavoritos.map((usuario) => (
+          <TarjetaUsuario key={usuario.id} 
+          usuario={usuario} 
+          esFavorito={eliminarFavorito} />
+        ))}
+      </div>
     </div>
   );
 }
