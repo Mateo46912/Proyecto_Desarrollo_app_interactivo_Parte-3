@@ -7,7 +7,7 @@ const storeUsuarios = GuardarStoreUsuarios();
 
 <template>
     <h1>Usuarios Favoritos</h1>
-     <span id = "contadorFavs">Usuarios Favoritos: <String>{{storeUsuarios.contadorFavs}}</String></span>
+     <span id = "contadorFavs">Usuarios Favoritos: <String>{{storeUsuarios.usuariosFavoritos.length}}</String></span>
 
     <RouterLink to = "/">Volver a todos los usuarios</RouterLink>
 

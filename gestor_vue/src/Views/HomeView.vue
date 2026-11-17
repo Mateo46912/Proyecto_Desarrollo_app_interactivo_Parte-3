@@ -29,7 +29,7 @@ const usuariosBuscados = computed(()=>{
   <input id = "buscarCli" type = "text" placeholder="Ejm. Ervin"  v-model = "textoIngresado"></input>
   </div>
  
-  <span id = "contadorFavs">Usuarios Favoritos: <String>{{storeUsuarios.contadorFavs}}</String></span>
+  <span id = "contadorFavs">Usuarios Favoritos: <String>{{storeUsuarios.usuariosFavoritos.length}}</String></span>
 
   <RouterLink to="/usuarios/favs">Ver Favoritos</RouterLink>
 
